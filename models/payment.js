@@ -1,12 +1,28 @@
-// models/Payment.js
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-const paymentSchema = new mongoose.Schema({
-  amount: Number,
-  from: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-  to: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-  gig: { type: mongoose.Schema.Types.ObjectId, ref: 'Gig' },
-  timestamp: { type: Date, default: Date.now },
-});
+const paymentSchema = new mongoose.Schema(
+  {
+    clientId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
+    freelancerId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
+    jobId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Job",
+      required: true,
+    },
+    amount: {
+      type: Number,
+      required: true,
+    },
+  },
+  { timestamps: true }
+);
 
-module.exports = mongoose.model('Payment', paymentSchema);
+module.exports = mongoose.model("Payment", paymentSchema);
