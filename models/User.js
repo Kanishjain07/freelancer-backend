@@ -18,8 +18,8 @@ const userSchema = new mongoose.Schema({
   },
   role: {
     type: String,
-    enum: ["client", "freelancer", "admin"],
-    default: "client",
+    enum: ["user", "client", "freelancer", "admin"],
+    default: "user", // 🔒 no special access by default
   },
 });
 
