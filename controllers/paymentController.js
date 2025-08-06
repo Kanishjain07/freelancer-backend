@@ -1,5 +1,5 @@
 const Job = require("../models/Job");
-const Payment = require("../models/payment"); // ✅ Import the correct Payment model
+const Payment = require("../models/payment"); 
 
 exports.recordPayment = async (req, res) => {
   try {

@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const jobSchema = new mongoose.Schema({
   title: {
     type: String,
-    required: false, // Payment-only records may not need a title
+    required: false, 
   },
   description: {
     type: String,

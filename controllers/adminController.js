@@ -1,6 +1,6 @@
 const User = require("../models/User");
-const Gig = require("../models/Gig"); // ✅ Required for getAllGigs & deleteGig
-const Payment = require("../models/payment"); // ✅ Required for getAllPayments
+const Gig = require("../models/Gig"); 
+const Payment = require("../models/payment"); 
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 

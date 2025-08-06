@@ -1,4 +1,4 @@
-// controllers/dashboardController.js
+
 const Payment = require("../models/payment");
 const Job = require("../models/Job");
 const Gig = require("../models/Gig");

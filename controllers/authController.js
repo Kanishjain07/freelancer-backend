@@ -1,4 +1,4 @@
-const User = require("../models/User"); // Make sure this exports a Mongoose model!
+const User = require("../models/User"); 
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
@@ -18,7 +18,7 @@ exports.registerUser = async (req, res) => {
       name,
       email,
       password: hashedPassword,
-      role: role || "client", // default fallback
+      role: role || "client", 
     });
 
     await user.save();
